@@ -5,10 +5,6 @@ $conn = getDbConnection();
 
 $query = "TRUNCATE table divisions";
 mysqli_multi_query($conn, $query);
-// $query = "TRUNCATE table districts";
-// mysqli_multi_query($conn, $query);
-// $query = "TRUNCATE table upazilas";
-// mysqli_multi_query($conn, $query);
 // $query = "TRUNCATE table unions";
 // mysqli_multi_query($conn, $query);
 
