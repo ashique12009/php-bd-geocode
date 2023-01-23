@@ -5186,7 +5186,7 @@ foreach ($unions as $union) {
 }
 
 if ($conn->multi_query($sql) === TRUE) {
-    echo 'Union Done!';
+    echo 'Union Done!<br>';
 }
 else {
     echo "Error: " . $sql . "<br>" . $conn->error;

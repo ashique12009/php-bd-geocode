@@ -5,8 +5,6 @@ $conn = getDbConnection();
 
 $query = "TRUNCATE table divisions";
 mysqli_multi_query($conn, $query);
-// $query = "TRUNCATE table unions";
-// mysqli_multi_query($conn, $query);
 
 $divisions = array(
     array("id"=>"1","name"=>"Barisal","bn_name"=>"বরিশাল","lon"=>"90.3471939","lat"=>"22.4191472","coordinate"=>"22.41914717, 90.3471939","code"=>"BD10"),
@@ -35,7 +33,7 @@ foreach ($divisions as $division) {
 }
 
 if ($conn->multi_query($sql) === TRUE) {
-    echo 'Divisions Done!';
+    echo 'Divisions Done!<br>';
 }
 else {
     echo "Error: " . $sql . "<br>" . $conn->error;

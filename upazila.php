@@ -5,8 +5,6 @@ $conn = getDbConnection();
 
 $query = "TRUNCATE table upazilas";
 mysqli_multi_query($conn, $query);
-// $query = "TRUNCATE table unions";
-// mysqli_multi_query($conn, $query);
 
 $upazilas = array(
     array("id"=>"1","district_id"=>"22","name"=>"Abhaynagar","bn_name"=>"অভয়নগর","lon"=>"89.4205786","lat"=>"23.0176053","coordinate"=>"23.0176053461554, 89.4205785901995","code"=>"BD404104"),
@@ -981,7 +979,7 @@ foreach ($upazilas as $upazila) {
 }
 
 if ($conn->multi_query($sql) === TRUE) {
-    echo 'Upazila Done!';
+    echo 'Upazila Done!<br>';
 }
 else {
     echo "Error: " . $sql . "<br>" . $conn->error;
